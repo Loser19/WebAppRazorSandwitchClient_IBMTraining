@@ -1,0 +1,27 @@
+﻿@page
+@model WebAppRazorSandwitchClient.Pages.SwCreateModel
+@{
+    ViewData["Title"] = "Create Sandwich";
+}
+
+<h1>Create a New Sandwich</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="NewSandwitch.Name">Name</label>
+        <input asp-for="NewSandwitch.Name" class="form-control" />
+        <span asp-validation-for="NewSandwitch.Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="NewSandwitch.Price">Price</label>
+        <input asp-for="NewSandwitch.Price" class="form-control" type="number" step="0.01" />
+        <span asp-validation-for="NewSandwitch.Price" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Create</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

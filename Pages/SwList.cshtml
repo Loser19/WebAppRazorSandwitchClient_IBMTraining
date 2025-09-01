@@ -19,7 +19,6 @@
             <tr>
                 <td>@sandwich.Name</td>
                 <td>@($"{sandwich.Price:C}")</td>
-
                 <td>
                     <a asp-page="/SwDetails" asp-route-id="@sandwich.Id" class="btn btn-info">Details</a>
                     <a asp-page="/SwEdit" asp-route-id="@sandwich.Id" class="btn btn-warning">Edit</a>

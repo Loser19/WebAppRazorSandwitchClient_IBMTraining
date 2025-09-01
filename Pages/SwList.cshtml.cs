@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-
 namespace WebAppRazorSandwitchClient.Pages
 {
     public class SwListModel : PageModel
@@ -19,7 +18,6 @@ namespace WebAppRazorSandwitchClient.Pages
         {
             SwList = _service.GetSandwiches();
 
-        }
         public async Task<IActionResult> OnPostDeleteAsync(int id)
         {
             var success = await _service.DeleteSandwitchAsync(id);
@@ -30,6 +28,5 @@ namespace WebAppRazorSandwitchClient.Pages
 
             return RedirectToPage(); // Refresh the list
         }
-
     }
 }
